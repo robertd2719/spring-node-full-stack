@@ -22971,25 +22971,41 @@ var _s = $RefreshSig$();
 const TaskInput = ()=>{
     _s();
     const [title, updateTitle] = _react.useState("");
+    const [description, updateDescription] = _react.useState("");
     const HandleInputTitleChange = (event)=>{
         updateTitle(event.target.value);
+    };
+    const HandleInputDescriptionChange = (event)=>{
+        updateDescription(event.target.value);
+    };
+    const handleSubmit = async (event)=>{
+        event.preventDefault();
+        try {
+            const newTask = {
+                title,
+                description
+            };
+            const response = await _taskRouteDefault.default.post('/tasks', newTask);
+        } catch (err) {
+            console.log(`Error: ${err.message}`);
+        }
     };
     return(/*#__PURE__*/ _jsxRuntime.jsxs("div", {
         __source: {
             fileName: "src/controllers/taskInput/TaskInput.jsx",
-            lineNumber: 12,
+            lineNumber: 28,
             columnNumber: 9
         },
         __self: undefined,
         children: [
-            /*#__PURE__*/ _jsxRuntime.jsx("h5", {
+            /*#__PURE__*/ _jsxRuntime.jsx("h3", {
                 __source: {
                     fileName: "src/controllers/taskInput/TaskInput.jsx",
-                    lineNumber: 13,
+                    lineNumber: 29,
                     columnNumber: 13
                 },
                 __self: undefined,
-                children: "New Task "
+                children: "New Task"
             }),
             /*#__PURE__*/ _jsxRuntime.jsx("input", {
                 type: "text",
@@ -22999,15 +23015,39 @@ const TaskInput = ()=>{
                 onChange: HandleInputTitleChange,
                 __source: {
                     fileName: "src/controllers/taskInput/TaskInput.jsx",
-                    lineNumber: 14,
+                    lineNumber: 30,
+                    columnNumber: 13
+                },
+                __self: undefined
+            }),
+            /*#__PURE__*/ _jsxRuntime.jsx("h3", {
+                __source: {
+                    fileName: "src/controllers/taskInput/TaskInput.jsx",
+                    lineNumber: 31,
+                    columnNumber: 13
+                },
+                __self: undefined,
+                children: "Description"
+            }),
+            /*#__PURE__*/ _jsxRuntime.jsx("textarea", {
+                name: "description",
+                id: "",
+                cols: "30",
+                rows: "3",
+                value: description,
+                onChange: HandleInputDescriptionChange,
+                __source: {
+                    fileName: "src/controllers/taskInput/TaskInput.jsx",
+                    lineNumber: 32,
                     columnNumber: 13
                 },
                 __self: undefined
             }),
             /*#__PURE__*/ _jsxRuntime.jsx("button", {
+                onClick: handleSubmit,
                 __source: {
                     fileName: "src/controllers/taskInput/TaskInput.jsx",
-                    lineNumber: 15,
+                    lineNumber: 34,
                     columnNumber: 13
                 },
                 __self: undefined,
@@ -23016,7 +23056,7 @@ const TaskInput = ()=>{
         ]
     }));
 };
-_s(TaskInput, "4caioD1YBf7nrfLlZHt5ySUilwE=");
+_s(TaskInput, "PMzyvYPOUMgFsEG/gwI+VulIf5U=");
 _c = TaskInput;
 exports.default = TaskInput;
 var _c;
@@ -23033,7 +23073,7 @@ parcelHelpers.defineInteropFlag(exports);
 var _axios = require("axios");
 var _axiosDefault = parcelHelpers.interopDefault(_axios);
 const taskRoute = _axiosDefault.default.create({
-    baseURL: 'http://localhost:8080/api/v1/tasks'
+    baseURL: 'http://localhost:8080/api/v1'
 });
 exports.default = taskRoute;
 

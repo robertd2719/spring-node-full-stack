@@ -8,25 +8,32 @@ body{
     margin: 0;
     padding: 0;
 }
-h1,h2,h3{
-    margin:0;
+h1,h2,h3,h4{
+    margin:.3rem;
 }
 
 p{
     margin: 0 0 1.5rem 0;
 }
 
-/* Classes */
-.container{
-    width: 80%;
-    margin: 2rem auto;
-}
 
 input{
     border: solid black 2px;
     padding: .5rem;
-    width: 70%;
+    width: 100%;
     border-radius: 5px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+}
+textarea{
+    border: solid black 2px;
+    padding: .5rem;
+    width: 100%;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
 }
 
 button{
@@ -34,6 +41,16 @@ button{
     border-radius: 5px;
     padding: .5rem 1rem;
     font-weight: bold;
-    background-color: cornflowerblue;
     margin: 0 .15rem;
+    display: block;
+}
+button:hover{
+    background-color: cornflowerblue;
+    color: #f4f4f4;
+}
+
+/* Classes */
+.container{
+    width: 80%;
+    margin: 2rem auto;
 }
