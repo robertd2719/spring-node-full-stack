@@ -13,6 +13,7 @@ const TaskInput = () => {
         updateDescription(event.target.value);
     }
 
+    // handle submission of the form
     const handleSubmit = async (event) =>{
         event.preventDefault();
         try{
