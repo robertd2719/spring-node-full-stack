@@ -1,0 +1,23 @@
+GET localhost:8080/api/v1/tasks
+
+###
+POST localhost:8080/api/v1/tasks
+Content-Type: application/json
+
+{
+  "title": "eat some doughnuts",
+  "description" : "doughnuts are terrible for the body, but do wonders for the soul"
+}
+###
+POST localhost:8080/api/v1/tasks
+Content-Type: application/json
+
+{
+  "title": "wash the dishes",
+  "description" : "dishes need to be washed at least every morning and after dinner"
+}
+###
+
+DELETE localhost:8080/api/v1/tasks/1
+
+

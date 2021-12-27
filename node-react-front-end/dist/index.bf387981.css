@@ -1,0 +1,36 @@
+@import "https://fonts.googleapis.com/css2?family=Roboto&display=swap";
+body{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.12rem;
+    word-spacing: 0.16rem ;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+h1,h2,h3{
+    margin:0;
+}
+p{
+    margin: 0 0 1.5rem 0;
+}
+/* Classes */
+.container{
+    width: 80%;
+    margin: 2rem auto;
+}
+input{
+    border: solid black 2px;
+    padding: .5rem;
+    width: 70%;
+    border-radius: 5px;
+}
+button{
+    border: solid black 2px;
+    border-radius: 5px;
+    padding: .5rem 1rem;
+    font-weight: bold;
+    background-color: cornflowerblue;
+    margin: 0 .15rem;
+}
+/*# sourceMappingURL=index.bf387981.css.map */
