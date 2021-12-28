@@ -38,7 +38,13 @@ const App = () => {
                 <div className="task-view">
                     <h3>Task List</h3>
                     <ul className="task-table">
-                    {taskList.map(task => <li key={task.id}>{task.title}</li>)}
+                    {taskList.map(task =>
+                    {
+                        return ( <li key={task.id} className="list-item">
+                            {task.title}
+                            <button>Delete</button>
+                        </li>)
+                    })}
                     </ul>
                 </div>
             </div>

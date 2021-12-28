@@ -1,2 +1,5 @@
 # Project exclude paths
 /node-react-front-end/node_modules/
+node-react-front-end/.parcel-cache/f29bd700a54591da.txt
+node-react-front-end/.parcel-cache/data.mdb
+node-react-front-end/.parcel-cache/data.mdb
