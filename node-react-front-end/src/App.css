@@ -34,6 +34,7 @@ textarea{
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     font-size: 15px;
+    resize: none;
 }
 
 button{
@@ -45,8 +46,30 @@ button{
     display: block;
 }
 button:hover{
-    background-color: cornflowerblue;
-    color: #f4f4f4;
+    background-color: lightblue;
+    color: black;
+}
+
+.task-table{
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+.task-table > li{
+    padding: 1rem;
+    min-width: 500px;
+}
+
+.task-table > li:nth-child(odd){
+    background-color: lightblue;
+}
+.task-view{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Classes */

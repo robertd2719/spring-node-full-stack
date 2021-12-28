@@ -1,10 +1,11 @@
 import {useState, useEffect} from "react";
 import taskRoute from "../../api/TaskRoute";
 
-const TaskInput = () => {
+const TaskInput = ({taskList,updateTaskList}) => {
 
     const [title, updateTitle] = useState("");
     const [description, updateDescription] = useState("");
+    // const [taskList, updateTaskList] = useState([]);
 
     const HandleInputTitleChange = (event) => {
         updateTitle(event.target.value);
@@ -19,11 +20,13 @@ const TaskInput = () => {
         try{
             const newTask = {title, description};
             const response = await taskRoute.post('/tasks',newTask);
+            updateTaskList([...taskList,newTask]);
+            updateTitle("");
+            updateDescription("");
         } catch (err){
             console.log(`Error: ${err.message}`)
         }
     }
-
 
     return (
         <div>

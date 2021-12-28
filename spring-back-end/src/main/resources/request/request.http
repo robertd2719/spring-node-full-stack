@@ -5,16 +5,16 @@ POST localhost:8080/api/v1/tasks
 Content-Type: application/json
 
 {
-  "title": "eat some doughnuts",
-  "description" : "doughnuts are terrible for the body, but do wonders for the soul"
+  "title": "watch some television",
+  "description" : "television is bad for you !!!"
 }
 ###
 POST localhost:8080/api/v1/tasks
 Content-Type: application/json
 
 {
-  "title": "wash the dishes",
-  "description" : "dishes need to be washed at least every morning and after dinner"
+  "title": "take out the trash",
+  "description" : "trash needs to be pulled to the road every monday"
 }
 ###
 
