@@ -52,6 +52,7 @@ const App = () => {
                 <TaskInput taskList={taskList} updateTaskList={updateTaskList}/>
                 <div className="task-view">
                     <h3>Task List</h3>
+                    <div id="spacer"></div>
                     <ul className="task-table">
                         {taskList.map(task => <TaskItem key={task.id} task={task} taskList={taskList} deleteTask={deleteTask}/>)}
                     </ul>

@@ -59,6 +59,7 @@ button:hover{
 .task-table > li{
     padding: 1rem;
     min-width: 500px;
+    border-radius: 5px;
 }
 
 .task-table > li:nth-child(odd){
@@ -71,6 +72,18 @@ button:hover{
     justify-content: center;
     align-items: center;
 }
+#task-title{
+    margin-bottom: 2px;
+    color: cornflowerblue;
+}
+#task-description{
+    color: tomato;
+    margin-bottom: 2px;
+}
+#spacer{
+    height: 10px;
+}
+
 .list-item{
     display: flex;
     align-items: center;

@@ -30,11 +30,14 @@ const TaskInput = ({taskList,updateTaskList}) => {
 
     return (
         <div>
-            <h3>New Task</h3>
+            <h3 id="task-title">New Task</h3>
             <input type="text" name="title" id="" value={title} onChange={HandleInputTitleChange}/>
-            <h3>Description</h3>
+            <div id="spacer"></div>
+            <h3 id="task-description">Description</h3>
             <textarea name="description" id="" cols="30" rows="3" value={description}
                       onChange={HandleInputDescriptionChange}/>
+            <div id="spacer"></div>
+            <div id="spacer"></div>
             <button onClick={handleSubmit}>Submit</button>
 
         </div>
