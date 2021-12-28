@@ -28,7 +28,7 @@ input{
 }
 textarea{
     border: solid black 2px;
-    padding: .5rem;
+    padding: .3rem;
     width: 100%;
     border-radius: 5px;
     font-family: 'Roboto', sans-serif;
@@ -46,8 +46,8 @@ button{
     display: block;
 }
 button:hover{
-    background-color: lightblue;
-    color: black;
+    background-color: black;
+    color: white;
 }
 
 .task-table{
@@ -73,12 +73,24 @@ button:hover{
     align-items: center;
 }
 #task-title{
-    margin-bottom: 2px;
-    color: cornflowerblue;
+    height: 1.6rem;
+    width: 110px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    padding: .10rem .8rem;
+    margin-bottom: 0;
+    color: white;
+    background-color: black;
 }
 #task-description{
-    color: tomato;
-    margin-bottom: 2px;
+    margin-bottom: 0;
+    height: 1.6rem;
+    width: 110px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    padding: .10rem .8rem;
+    background-color: black;
+    color: white;
 }
 #spacer{
     height: 10px;

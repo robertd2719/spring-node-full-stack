@@ -1,7 +1,6 @@
 import './App.css';
-import {useState, useEffect} from "react";
+import {useEffect, useState} from "react";
 import TaskInput from "./components/taskInput/TaskInput";
-import TaskList from "./components/taskList/TaskList";
 import TaskRoute from "./api/TaskRoute";
 import TaskItem from "./components/taskItem/TaskItem";
 
@@ -45,7 +44,7 @@ const App = () => {
 
     return (
         <div>
-            <h1 align="center">Bau Haus</h1>
+            <h1 align="center">BauHaus</h1>
             <h4 align="center">Task Manager</h4>
             <div className="container">
                 <p> A simple application to create, add, and delete user taskings</p>
