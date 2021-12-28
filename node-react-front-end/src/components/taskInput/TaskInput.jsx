@@ -20,7 +20,7 @@ const TaskInput = ({taskList,updateTaskList}) => {
         try{
             const newTask = {title, description};
             const response = await taskRoute.post('/tasks',newTask);
-            updateTaskList([...taskList,newTask]);
+            updateTaskList([...taskList,response.data]);
             updateTitle("");
             updateDescription("");
         } catch (err){

@@ -3,6 +3,8 @@ package com.example.springbackend.controllers;
 import com.example.springbackend.Services.TaskService;
 import com.example.springbackend.entities.Task;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -36,8 +38,13 @@ public class TaskController {
     }
 
     @PostMapping
-    public void createOneTask(@RequestBody Task task) {
-        taskService.createTask(task);
+    public ResponseEntity<?> createOneTask(@RequestBody Task task) {
+        try{
+            taskService.createTask(task);
+            return new ResponseEntity<>(task, HttpStatus.OK);
+        } catch(RuntimeException err){
+            return new ResponseEntity<>(err.getMessage(),HttpStatus.BAD_REQUEST);
+        }
     }
 
     @DeleteMapping("/{id}")
